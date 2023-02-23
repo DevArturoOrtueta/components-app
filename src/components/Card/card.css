@@ -1,0 +1,13 @@
+.art-card{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    padding: 0.7rem;
+    border: 1px solid rgba(143, 143, 143, 0.5);
+    border-radius: 0.2rem;
+    transition: 0.2s ease;
+}
+
+.art-card:hover{
+    box-shadow: 2px 2px 5px grey;
+}
