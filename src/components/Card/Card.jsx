@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react'
 import './card.css'
 
 export const Card = (props) => {
@@ -8,29 +9,40 @@ export const Card = (props) => {
           <div className='art-card'>
         { props?.title ? 
           <div className='art-card-title'>
-            <label>{props.title}</label>
+            <label>{props?.title}</label>
           </div>
           :
           <></>
         }
 
         {
-          props?.image ?
-          <div className='art-card-img'>
-            <img src={props?.image} />
-          </div>
-          : 
-          <></>
+          
+            props?.image ?
+            <div className='art-card-img'>
+              <img src={props?.image} />
+            </div>
+            : 
+            <></>
         }
       
 
-        <div className='art-card-body'>
-            <label>Body</label>
-        </div>
+         {
+          props?.body ?
+          <div className='art-card-body'>
+            <label>{props.body}</label>
+          </div>
+          :
+          <></>
+        }
 
-        <div className='art-card-footer'>
-            <label>Footer</label>
-        </div>
+        {
+          props?.footer ?
+          <div className='art-card-footer'>
+            <label>{props.footer}</label>
+          </div>
+          :
+          <></>
+        }
       </div>
         </a>
       :
@@ -53,13 +65,24 @@ export const Card = (props) => {
         }
       
 
-        <div className='art-card-body'>
-            <label>Body</label>
-        </div>
+        {
+          props?.body ?
+          <div className='art-card-body'>
+            <label>{props.body}</label>
+          </div>
+          :
+          <></>
+        }
 
-        <div className='art-card-footer'>
-            <label>Footer</label>
-        </div>
+        {
+          props?.footer ?
+          <div className='art-card-footer'>
+            <label>{props.footer}</label>
+          </div>
+          :
+          <></>
+        }
+        
       </div>
   )
       

@@ -15,11 +15,14 @@
 
 .art-card-img img{
     width: 100%;
-
+    margin: 0.7rem auto;
 }
-
 
 .art-card-ref {
     text-decoration: none;
     color: black;
+}
+
+.art-card-body{
+    margin: 0.7rem auto;
 }
