@@ -7,6 +7,7 @@ export const Card = (props) => {
     props?.link_card ? 
         <a href={props.link_card} className="art-card-ref">
           <div className='art-card'>
+        {/* Evaluate if the card have title */}
         { props?.title ? 
           <div className='art-card-title'>
             <label>{props?.title}</label>
@@ -14,9 +15,8 @@ export const Card = (props) => {
           :
           <></>
         }
-
+        {/* Evaluate if the card have an image */}
         {
-          
             props?.image ?
             <div className='art-card-img'>
               <img src={props?.image} />
@@ -24,9 +24,8 @@ export const Card = (props) => {
             : 
             <></>
         }
-      
-
-         {
+        {/* Evalute if the card have some body content */}
+        {
           props?.body ?
           <div className='art-card-body'>
             <label>{props.body}</label>
@@ -34,7 +33,7 @@ export const Card = (props) => {
           :
           <></>
         }
-
+        {/* Evaluate if the card have footer */}
         {
           props?.footer ?
           <div className='art-card-footer'>
@@ -47,24 +46,24 @@ export const Card = (props) => {
         </a>
       :
       <div className='art-card'>
-        { props?.title ? 
+         {/* Evaluate if the card have title */}
+         { props?.title ? 
           <div className='art-card-title'>
-            <label>{props.title}</label>
+            <label>{props?.title}</label>
           </div>
           :
           <></>
         }
-
+        {/* Evaluate if the card have an image */}
         {
-          props?.image ?
-          <div className='art-card-img'>
-            <img src={props?.image} />
-          </div>
-          : 
-          <></>
+            props?.image ?
+            <div className='art-card-img'>
+              <img src={props?.image} />
+            </div>
+            : 
+            <></>
         }
-      
-
+        {/* Evalute if the card have some body content */}
         {
           props?.body ?
           <div className='art-card-body'>
@@ -73,7 +72,7 @@ export const Card = (props) => {
           :
           <></>
         }
-
+        {/* Evaluate if the card have footer */}
         {
           props?.footer ?
           <div className='art-card-footer'>
